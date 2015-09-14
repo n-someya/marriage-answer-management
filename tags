@@ -1,0 +1,81 @@
+!_TAG_FILE_FORMAT	2	/extended format; --format=1 will not append ;" to lines/
+!_TAG_FILE_SORTED	1	/0=unsorted, 1=sorted, 2=foldcase/
+!_TAG_PROGRAM_AUTHOR	Darren Hiebert	/dhiebert@users.sourceforge.net/
+!_TAG_PROGRAM_NAME	Exuberant Ctags	//
+!_TAG_PROGRAM_URL	http://ctags.sourceforge.net	/official site/
+!_TAG_PROGRAM_VERSION	5.8	//
+ActiveSupport	test/test_helper.rb	/^class ActiveSupport::TestCase$/;"	c
+AddBreadcrumbs	app/controllers/concerns/add_breadcrumbs.rb	/^module AddBreadcrumbs$/;"	m
+AddUsers	db/migrate/20140719151216_add_users.rb	/^class AddUsers < ActiveRecord::Migration$/;"	c
+Application	config/application.rb	/^  class Application < Rails::Application$/;"	c	class:RailsBlogSample
+ApplicationController	app/controllers/application_controller.rb	/^class ApplicationController < ActionController::Base$/;"	c
+ApplicationHelper	app/helpers/application_helper.rb	/^module ApplicationHelper$/;"	m
+Article	app/models/article.rb	/^class Article < ActiveRecord::Base$/;"	c
+AuthorizedController	app/controllers/authorized_controller.rb	/^class AuthorizedController < ApplicationController$/;"	c
+ChangePassword	app/models/change_password.rb	/^class ChangePassword$/;"	c
+Comment	app/models/comment.rb	/^class Comment < ActiveRecord::Base$/;"	c
+CreateArticles	db/migrate/20140720041227_create_articles.rb	/^class CreateArticles < ActiveRecord::Migration$/;"	c
+CreateComments	db/migrate/20140720181348_create_comments.rb	/^class CreateComments < ActiveRecord::Migration$/;"	c
+DeviseCreateUsers	db/migrate/20140719151215_devise_create_users.rb	/^class DeviseCreateUsers < ActiveRecord::Migration$/;"	c
+Home	app/controllers/home/articles_controller.rb	/^class Home::ArticlesController < AuthorizedController$/;"	c
+Home	app/controllers/home/comments_controller.rb	/^class Home::CommentsController < AuthorizedController$/;"	c
+Home	app/controllers/home/settings/accounts_controller.rb	/^class Home::Settings::AccountsController < Home::Settings::BaseController$/;"	c
+Home	app/controllers/home/settings/base_controller.rb	/^class Home::Settings::BaseController < AuthorizedController$/;"	c
+Home	app/controllers/home/settings/passwords_controller.rb	/^class Home::Settings::PasswordsController < Home::Settings::BaseController$/;"	c
+Home	app/controllers/home/settings/profiles_controller.rb	/^class Home::Settings::ProfilesController < Home::Settings::BaseController$/;"	c
+Home	app/controllers/home/withdrawals_controller.rb	/^class Home::WithdrawalsController < AuthorizedController$/;"	c
+HomeController	app/controllers/home_controller.rb	/^class HomeController < AuthorizedController$/;"	c
+RailsBlogSample	config/application.rb	/^module RailsBlogSample$/;"	m
+RedcarpetCompiler	app/models/concerns/redcarpet_compiler.rb	/^class RedcarpetCompiler$/;"	c
+RegistrationsController	app/controllers/registrations_controller.rb	/^class RegistrationsController < Devise::RegistrationsController$/;"	c
+U	app/controllers/u/articles_controller.rb	/^class U::ArticlesController < ApplicationController$/;"	c
+UController	app/controllers/u_controller.rb	/^class UController < ApplicationController$/;"	c
+User	app/models/user.rb	/^class User < ActiveRecord::Base$/;"	c
+WelcomeController	app/controllers/welcome_controller.rb	/^class WelcomeController < ApplicationController$/;"	c
+_set_breadcrumbs	app/controllers/concerns/add_breadcrumbs.rb	/^  def _set_breadcrumbs$/;"	f	class:AddBreadcrumbs
+add_breadcrumb	app/controllers/application_controller.rb	/^  def add_breadcrumb(label, link = nil)$/;"	f	class:ApplicationController
+add_breadcrumb_home	app/controllers/application_controller.rb	/^  def add_breadcrumb_home$/;"	f	class:ApplicationController
+after_sign_in_path_for	app/controllers/registrations_controller.rb	/^    def after_sign_in_path_for(resource)$/;"	f	class:RegistrationsController
+after_sign_up_path_for	app/controllers/registrations_controller.rb	/^    def after_sign_up_path_for(resource)$/;"	f	class:RegistrationsController
+article_params	app/controllers/home/articles_controller.rb	/^    def article_params$/;"	f	class:Home
+body_text	app/models/article.rb	/^  def body_text$/;"	f	class:Article
+change	db/migrate/20140719151215_devise_create_users.rb	/^  def change$/;"	f	class:DeviseCreateUsers
+change	db/migrate/20140719151216_add_users.rb	/^  def change$/;"	f	class:AddUsers
+change	db/migrate/20140720041227_create_articles.rb	/^  def change$/;"	f	class:CreateArticles
+change	db/migrate/20140720181348_create_comments.rb	/^  def change$/;"	f	class:CreateComments
+comment_params	app/controllers/home/comments_controller.rb	/^    def comment_params$/;"	f	class:Home
+compile	app/models/concerns/redcarpet_compiler.rb	/^  def self.compile(markdown_text)$/;"	F	class:RedcarpetCompiler
+compile_text	app/models/concerns/redcarpet_compiler.rb	/^  def self.compile_text(markdown_text)$/;"	F	class:RedcarpetCompiler
+create	app/controllers/home/articles_controller.rb	/^  def create$/;"	f	class:Home
+create	app/controllers/home/comments_controller.rb	/^  def create$/;"	f	class:Home
+create	app/controllers/registrations_controller.rb	/^  def create$/;"	f	class:RegistrationsController
+destroy	app/controllers/home/articles_controller.rb	/^  def destroy$/;"	f	class:Home
+destroy	app/controllers/home/withdrawals_controller.rb	/^  def destroy$/;"	f	class:Home
+draft	app/controllers/home/articles_controller.rb	/^  def draft$/;"	f	class:Home
+edit	app/controllers/home/articles_controller.rb	/^  def edit$/;"	f	class:Home
+edit	app/controllers/home/settings/accounts_controller.rb	/^  def edit$/;"	f	class:Home
+edit	app/controllers/home/settings/passwords_controller.rb	/^  def edit$/;"	f	class:Home
+edit	app/controllers/home/withdrawals_controller.rb	/^  def edit$/;"	f	class:Home
+gravatar_url	app/models/user.rb	/^  def gravatar_url(*args)$/;"	f	class:User
+html_to_text	app/models/concerns/redcarpet_compiler.rb	/^  def self.html_to_text(html_str)$/;"	F	class:RedcarpetCompiler
+index	app/controllers/home/articles_controller.rb	/^  def index$/;"	f	class:Home
+index	app/controllers/u/articles_controller.rb	/^  def index$/;"	f	class:U
+new	app/controllers/home/articles_controller.rb	/^  def new$/;"	f	class:Home
+new	app/controllers/registrations_controller.rb	/^  def new$/;"	f	class:RegistrationsController
+publish	app/controllers/home/articles_controller.rb	/^  def publish$/;"	f	class:Home
+safe_date_localize	app/helpers/application_helper.rb	/^  def safe_date_localize(time)$/;"	f	class:ApplicationHelper
+set_article	app/controllers/home/articles_controller.rb	/^    def set_article$/;"	f	class:Home
+set_article	app/controllers/u/articles_controller.rb	/^    def set_article$/;"	f	class:U
+set_user	app/controllers/u/articles_controller.rb	/^    def set_user$/;"	f	class:U
+set_user	app/controllers/u_controller.rb	/^    def set_user$/;"	f	class:UController
+show	app/controllers/home/articles_controller.rb	/^  def show$/;"	f	class:Home
+show	app/controllers/home_controller.rb	/^  def show$/;"	f	class:HomeController
+show	app/controllers/u/articles_controller.rb	/^  def show$/;"	f	class:U
+sign_up_params	app/controllers/registrations_controller.rb	/^    def sign_up_params$/;"	f	class:RegistrationsController
+update	app/controllers/home/articles_controller.rb	/^  def update$/;"	f	class:Home
+update	app/controllers/home/settings/accounts_controller.rb	/^  def update$/;"	f	class:Home
+update	app/controllers/home/settings/passwords_controller.rb	/^  def update$/;"	f	class:Home
+update	app/controllers/home/settings/profiles_controller.rb	/^  def update$/;"	f	class:Home
+user_params	app/controllers/home/settings/accounts_controller.rb	/^    def user_params$/;"	f	class:Home
+user_params	app/controllers/home/settings/profiles_controller.rb	/^    def user_params$/;"	f	class:Home
+wrap_transaction	app/controllers/application_controller.rb	/^    def wrap_transaction$/;"	f	class:ApplicationController

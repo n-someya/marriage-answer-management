@@ -1,0 +1,17 @@
+%div
+
+%h1
+  解答一覧
+
+%table.table.table-bordered
+  %thead
+    %tr
+      %th='設問'
+      %th='解答'
+      %th='正答数'
+  %tbody
+    - @corrects.each do |correct|
+      %tr
+        %td= correct.stage
+        %td= correct.correct
+        %td= correct.corcount
