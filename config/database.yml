@@ -81,6 +81,6 @@ test:
 #
 production:
   <<: *default
-  database: rails-blog-sample_production
-  username: someya
+  database: jjydb
+  username: jjy_user
   password: <%= ENV['RAILS-BLOG-SAMPLE_DATABASE_PASSWORD'] %>
