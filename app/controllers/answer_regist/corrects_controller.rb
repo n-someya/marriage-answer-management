@@ -22,8 +22,9 @@ class AnswerRegist::CorrectsController < ApplicationController
         @correct.assign_attributes(correct_params)
         #print @correct.stage, @correct.correct
         @correct.save
-        answers=Answer.find_by_sql(['select * from answers where stage = ? and answer is null', @correct.stage])
+        answers=Answer.find_by_sql(['select u.id as user_id  from users u left join ( select * from answers where stage = ?) ans on u.id = ans.user_id where answer is null order by u.id;', @correct.stage])
         answers.each do |answer|
+            answer.stage=@correct.stage
             answer.answer='E'
         end
         Answer.import answers
