@@ -4,14 +4,13 @@ class AnswerRegist::CorrectsController < ApplicationController
 
     # GET /answer_regist/corrects/new
     def new
+        max_correct=Correct.find_by_sql("select max(stage)+1 as stage from corrects;")
         @correct = Correct.new
+        @correct.stage=max_correct[0].stage
     end
 
     # GET /answer_regist/corrects/edit
     def edit
-        @correct = Correct.new
-        @correct.instance_variable_set(:@method,'put')
-        @correct.stage=params[:stage]
     end
     # GET /answer_regist/corrects
     def show
@@ -21,8 +20,13 @@ class AnswerRegist::CorrectsController < ApplicationController
     def create
         @correct=Correct.new
         @correct.assign_attributes(correct_params)
-        print @correct.stage, @correct.correct
+        #print @correct.stage, @correct.correct
         @correct.save
+        answers=Answer.find_by_sql(['select * from answers where stage = ? and answer is null', @correct.stage])
+        answers.each do |answer|
+            answer.answer='E'
+        end
+        Answer.import answers
         redirect_to action: 'show'
     end
     # PUT /answer_regist/corrects/1

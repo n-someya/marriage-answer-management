@@ -51,6 +51,7 @@ gem 'font-awesome-rails'
 
 gem 'bootstrap_form'
 # gem 'simple_form'
+gem 'activerecord-import'
 
 gem 'html2haml'
 gem 'redcarpet'

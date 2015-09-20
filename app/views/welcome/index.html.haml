@@ -10,15 +10,39 @@
 %div.text-center
   = link_to '解答一覧へ', answer_regist_corrects_path, :method => :get, class: 'btn btn-success btn-lg'
 %h1
-  解答一覧
+  上位回答者
 
-%table.table.table-bordered
-  %thead
-    %tr
-      %th='ユーザーID'
-      %th='正答数'
-  %tbody
-    - User.find_by_sql("select user_id, count(*) as cnt from answers left join corrects using (stage) where answer = correct group by user_id;").each do |user_ans|
+.form-group.col-sm-4
+  %table.table.table-bordered
+    %thead
       %tr
-        %td= user_ans.user_id
-        %td= user_ans.cnt
+        %th='ユーザーID'
+        %th='ユーザー名'
+        %th='正答数'
+    %tbody
+      - @users.each do |user_ans|
+        %tr
+          %td= user_ans.user_id
+          %td= user_ans.user_name
+          %td= user_ans.cnt
+
+%h1
+  解答別回答数一覧
+.form-group.col-sm-5
+  %table.table.table-bordered
+    %thead
+      %tr
+        %th='ステージ'
+        %th='A'
+        %th='B'
+        %th='C'
+        %th='D'
+    %tbody
+      - @answers.length.times do |i|
+        %tr
+          - stage = i + 1
+          %td= stage
+          %td= @answers[i]["A"]
+          %td= @answers[i]["B"]
+          %td= @answers[i]["C"]
+          %td= @answers[i]["D"]

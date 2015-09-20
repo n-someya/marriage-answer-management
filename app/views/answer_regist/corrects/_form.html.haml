@@ -2,13 +2,14 @@
 
   = f.alert_message '以下の項目を修正して下さい。'
 
-  = f.text_field :stage, autofocus: true
+  = f.text_field :stage, autofocus: true, value: @correct.stage
 
-  = f.text_field :correct, maxlength: 1
-  
-  .form-group
-    .col-sm-offset-2.col-sm-10
+  .form-group.col-md-5
+    - ["A", "B", "C", "D"].each do |crr|
+      = f.radio_button :correct , crr, label: crr, class: 'col-2-offset-2'
 
+  .form-group.col-sm-12.col-2-offset-2
+    .pull-left
       = f.button '更新する', name: 'ope[cmd]', value: 'save', class: 'btn btn-lg btn-default'
 
     .pull-right

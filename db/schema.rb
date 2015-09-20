@@ -55,13 +55,6 @@ ActiveRecord::Schema.define(version: 20150912141125) do
   end
 
   add_index "articles", ["user_id"], name: "index_articles_on_user_id", using: :btree
-
-  create_table "challenger", id: false, force: true do |t|
-    t.string  "candidate_id", limit: 1,   null: false
-    t.string  "user_id",      limit: 254
-    t.integer "stage",                    null: false
-  end
-
   create_table "comments", force: true do |t|
     t.integer  "article_id", null: false
     t.integer  "user_id",    null: false
@@ -112,13 +105,4 @@ ActiveRecord::Schema.define(version: 20150912141125) do
     t.string  "user_name", limit: 5,                                               null: false
     t.boolean "used",                default: false
   end
-
-  create_table "vote", force: true do |t|
-    t.string   "voter",        limit: 254
-    t.string   "candidate_id", limit: 1
-    t.integer  "point"
-    t.integer  "stage"
-    t.datetime "timeofvote",               default: "now()"
-  end
-
 end
