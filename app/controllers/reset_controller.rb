@@ -1,19 +1,20 @@
 require 'net/http'
+require 'csv'
 class ResetController < ApplicationController
     def index
     end
     def delete
         Correct.destroy_all()
         Answer.destroy_all()
-        Users.update_all(used: 'f')
+        User.update_all(used: 'f')
+        data={}
+        data["key"]="mwmns"
+        data["gameid"]=Time.now.strftime("%d%H%M%S")
         CSV.foreach('config/applications.csv') do |row|
-            uri=URI(row)
-            http = Net::HTTP.new(uri.host, uri.port)
-            data = URI.encode_www_form(data) 
-            http.start {|h|
-                h.post(uri.request_uri, data, header)
-            }
+            res= Net::HTTP.post_form(URI.parse(row[0]), data)
+            p res
         end
+        redirect_to controller: 'welcome', action: 'index'
     end
 end
 
