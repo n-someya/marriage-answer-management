@@ -19,13 +19,15 @@
   %table.table.table-bordered
     %thead
       %tr
-        %th='ユーザーID'
+        %th='ランキング'
+        -#%th='ユーザーID'
         %th='ユーザー名'
         %th='正答数'
     %tbody
       - @users.each do |user_ans|
         %tr
-          %td= user_ans.user_id
+          %td= user_ans.rank
+          -#%td= user_ans.user_id
           %td= user_ans.user_name
           %td= user_ans.cnt
 
